@@ -1,9 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+
+import 'package:fitness/fitness.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
-import 'package:fitness/fitness.dart';
 
 import 'extensions/extensions.dart';
 
@@ -96,7 +97,7 @@ class _FitnessApplicationState extends State<FitnessApplication> {
   }
 
   void _read({
-    required TimeRange timeRange,
+     TimeRange timeRange,
     int bucketByTime = 1,
     TimeUnit timeUnit = TimeUnit.days,
   }) async {
@@ -112,6 +113,7 @@ class _FitnessApplicationState extends State<FitnessApplication> {
     }
 
     setState(() {
+
       _dataPoints = results;
     });
   }
@@ -152,6 +154,7 @@ class _FitnessApplicationState extends State<FitnessApplication> {
 
   Widget _buildPermissionFlowView() {
     return Container(
+
       width: double.infinity,
       child: Column(
         mainAxisSize: MainAxisSize.max,
@@ -258,6 +261,7 @@ class _FitnessApplicationState extends State<FitnessApplication> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+
                 Lottie.asset(
                   'assets/walk.json',
                   width: 100.0,

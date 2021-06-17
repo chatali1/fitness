@@ -26,7 +26,7 @@ class Fitness {
   }
 
   static Future<List<DataPoint>> read({
-    TimeRange? timeRange,
+    TimeRange timeRange,
     int bucketByTime = 1,
     TimeUnit timeUnit = TimeUnit.days,
   }) async {
@@ -40,7 +40,7 @@ class Fitness {
       'bucket_by_time': bucketByTime,
       'time_unit': timeUnit.value,
     }).then(
-      (response) => response!
+      (response) => response
           .map((data) => DataPoint.fromJson(Map<String, dynamic>.from(data)))
           .toList(),
     );

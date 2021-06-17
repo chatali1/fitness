@@ -3,8 +3,8 @@ class TimeRange {
   final DateTime end;
 
   TimeRange({
-    required this.start,
-    required this.end,
+     this.start,
+     this.end,
   })  : assert(start.isBefore(end), 'start must be less than end.');
 
   @override
